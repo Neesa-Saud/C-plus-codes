@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class celcius
+{
+    int t;
+    public :
+       celcius()
+       {
+        t=0;
+       }
+       void enter()
+       {
+        cout<<"Enter the temperature in celcius";
+        cin>>t;
+       }
+       operator float()
+       {
+        float f;
+        f=((180*t)/100)+32;
+        return f;
+       }
+};
+int main()
+{
+    system("cls");
+    celcius c;
+    float f;
+    c.enter();
+    f=c;
+    cout<<endl<<"The temperature in farenheit is :"<<f;
+    return 0;
+}

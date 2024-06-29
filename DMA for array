@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class election
+{
+    int n,i;
+   static int count;
+    char name[20],address[30];
+    public:
+          void input()
+          {
+            cout<<"Enter the name and address of voter";
+            cin>>name>>address;
+            count++;
+          }
+          void show()
+          {
+            cout <<endl<<"The name and address of voters are";
+            cout<<endl<<name<<endl<<address;
+          }
+          static void total()
+          {
+            cout<<endl<<"The number of voters are :"<<count;
+          }
+};
+int election::count;
+int main()
+   {
+    int n,i;
+    election *p;
+    cout<<endl<<"How many records to enter";
+    cin>>n;
+    p=new election[n];
+    for(i=0;i<n;i++)
+    {
+       p->input();
+    }
+       for(i=0;i<n;i++)
+       {
+        p ->show();
+       }
+    election :: total();
+    delete [] p;
+    return 0;
+   }

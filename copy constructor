@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    int id;
+    public:
+    student(){
+        id =0;
+    }
+    student(int a )
+    {
+        id = a;
+    }
+    student ( student &obj)
+    {
+        cout<<endl<<"The copy constructor is called :";
+        id=obj.id;
+    }
+    void display()
+    {
+        cout <<"The id is :"<<id;
+    }
+    };
+    int main()
+    {
+        system("cls");
+        student c1,c3(1209),c2(1354);
+        c1.display();
+        c3.display();
+        student c4(c3);
+        c4.display();
+        return 0;
+    }

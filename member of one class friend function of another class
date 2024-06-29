@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+class nisha;
+class bhumika
+{
+    int x;
+    public :
+    void enter()
+    {
+        cout<<"Enter the first number";
+        cin>>x;
+    }
+    void show()
+    {
+        cout<<endl<<x;
+    }
+    void swap(nisha &n1);
+};
+class nisha
+{
+    int y;
+    public :
+    void input()
+    {
+        cout<<"Enter the second number";
+        cin>>y;
+    }
+    void display()
+    {
+        cout<<endl<<y;
+    }
+    friend void bhumika::swap(nisha &n1);
+};
+void bhumika::swap(nisha &n1)
+{
+    int b=x;
+    x=n1.y;
+    n1.y=b;
+}
+int main()
+{
+    nisha n1;
+    bhumika b1;
+    b1.enter();
+    n1.input();
+    cout<<"before swapping";
+    b1.show();
+    n1.display();
+    b1.swap(n1);
+    cout<<endl<<"after swapping";
+    b1.show();
+    n1.display();
+    return 0;
+}

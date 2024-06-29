@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class A
+{
+    protected : int x,y;
+    public : void assign()
+    {
+        x = 10;
+        y = 20;
+    }
+};
+class B:public A
+{
+   int s;
+   public: void add()
+   {
+    s=x+y;
+    cout<<"S ="<<s;
+   } 
+};
+class C :public A
+{
+ int t;
+ public :void subtract()
+ {
+    t=y-x;
+    cout<<endl<<"t="<<t;
+ }
+};
+class D : public A
+{
+    int m;
+    public : void multiply()
+    {
+        m=x*y;
+        cout<<endl<<"m="<<m;
+    }
+};
+int main()
+{
+    B b;
+    C c;
+    D d;
+    b.assign();
+    b.add();
+    c.assign();
+    c.subtract();
+    d.assign();
+    d.multiply();
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+void calculate()
+{
+ int a,b;
+ cout<<"enter any two integers";
+ cin>>a>>b;
+ if(b==0)
+ {
+    throw 8;
+ }
+ cout<<"The quotient is : "<<a/b;
+}
+    int main()
+    {
+    try{
+        calculate();
+    }
+    catch(int g)
+    {
+        cout<<endl<<"the divisor must not be 0";
+    }
+    return 0;
+}

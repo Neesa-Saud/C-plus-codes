@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class base
+{
+    protected : int y; int x;
+    public:
+    void getdata()
+    {
+        cout<<"Enter two numbers";
+        cin>>x>>y;
+    }
+};
+class derived : public base
+{
+    int s;
+    public:
+     void sum()
+     { 
+        s = x+y;
+     }
+     void show()
+     {
+        cout<<endl<<"the sum is :"<<s;
+     }
+};
+int main()
+{
+    base b;
+    derived d;
+    d.getdata();
+    d.sum();
+    d.show();
+return 0;
+}

@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class ritik
+{
+    int a,b;
+    public : ritik ();
+    ritik(int ,int);
+    void display()
+    {
+        cout<<"a="<<a;
+        cout<<endl<<"b="<<b;
+    }
+};
+ritik :: ritik()
+{
+    a=0;
+    b=0;
+}
+ritik :: ritik(int x,int y)
+{
+    a=x;
+    b=y;
+}
+int main()
+{
+    system("cls");
+ritik c1,c2; //object create garnaa saath default constructor call vayo jasley argument linna
+ritik c3(3,4),c4(5,6);
+c1.display();//yo default constructor ko vitra ko value display garxa
+c2.display();//""
+c3.display();// yaesley parametarized ko
+c4.display();
+return 0;
+}

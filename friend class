@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class bhumi;
+class nisha
+{
+   int x,y;
+   public: void input()
+   {
+    cout<<"Enter the numbers";
+    cin>>x>>y;
+   } 
+   friend class bhumi;
+};
+class bhumi
+{ public: 
+void sum(nisha &n)
+{
+    int sum=0;
+    sum = n.x +n.y;
+    cout<<"The sum is : "<<sum;
+}
+};
+int main()
+{
+    system("cls");
+    nisha n;
+    bhumi b;
+    n.input();
+    b.sum(n);
+    return 0;
+}

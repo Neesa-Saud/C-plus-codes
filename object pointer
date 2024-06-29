@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    int rollno;
+    char name[23];
+    public :
+    void getdata()
+    {
+        cout<<"Enter the rollno and name of student";
+        cin>>rollno>>name;
+    }
+    void display()
+    {
+        cout<<endl<<"THe name and roll no are";
+        cout<<endl<<name<<rollno;
+    }
+};
+int main()
+{
+    student c1;
+    student *n; //create pointer variable of class type
+    n=&c1; //initializing address of obj to the obj pointer
+    n->getdata();//pointing the member function by the object pointer
+    n->display();
+    return 0;
+}

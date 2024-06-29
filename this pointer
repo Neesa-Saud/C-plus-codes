@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    int roll;
+    public :
+
+    void getdata(int p)
+{
+        this -> roll = p;
+    }
+    void showdata()
+    {
+        cout<<endl<<"Rollno :"<< this ->roll;
+    }
+};
+int main()
+{
+    student s1;
+    s1.getdata(6);
+    s1.showdata();
+    return 0;
+}

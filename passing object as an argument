@@ -1,0 +1,33 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class time
+{
+    int hours , minutes;
+    public : void gettime(int h , int m)
+           {
+            hours = h ;
+            minutes = m ;
+           }
+           void display( )
+           {
+            cout<<hours<<"hours &"<<minutes<<"minutes";
+           }
+           time sum(time,time);
+};
+time time :: sum(time t1 , time t2)
+{
+    minutes = t1.minutes + t2.minutes ;
+    hours = minutes/60;
+    minutes = minutes%60;
+    hours = hours + t1.hours + t2.hours;
+}
+int main()
+{
+     time t1,t2,t3;
+     t1.gettime(20,12);
+     t2.gettime(10,60);
+     t3.sum(t1,t2);
+     t3.display();
+     return 0;
+}

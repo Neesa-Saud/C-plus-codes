@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int ma,sa;
+    try
+    {
+        cout<<"Enter mom age : ";
+        cin>>ma;
+        cout<<endl<<"Enter son age : ";
+        cin>>sa;
+        if(ma<sa)
+        {
+            throw 10;
+        }
+        cout<<"The age difference is : "<<ma-sa;
+    }
+    catch(int p)
+    {
+        cout<<"Mom's age cant be smaller than son age ";
+    }
+    return 0;
+}

@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    int rollno;
+    char name[20],address[30];
+    public : void input()
+            {
+                cout<<"Enter name address and rollno";
+                cin>>name>>address>>rollno;
+              }
+              void display()
+              {
+                cout<<"\n Name="<<name<<"\n address="<<address<<"\n rollno="<<rollno;
+              }
+              class date
+              {
+                int day,month,year;
+                public : 
+               void getdate();
+               void showdate();
+              };
+};
+void student::date::getdate()
+{
+    cout<<"Enter day month and year respectively";
+    cin>>day>>month>>year;
+}
+void student::date::showdate()
+{
+    cout<<endl<<day<<"/"<<month<<"/"<<year;
+}
+int main()
+{
+    student s1,s2;
+    student::date d1;
+    s1.input();
+    d1.getdate();
+    s1.display();
+    d1.showdate();
+    return 0;
+}
+

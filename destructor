@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class jalebi
+{
+    int count=0 ;
+    public :
+    jalebi()
+    { 
+        cout<<endl<<"Now constructor is called";
+        count ++;
+        cout<<endl<<count;
+    }
+    ~jalebi()//destructor also do not have any return type
+    {
+        cout<<endl<<"Now the desturctor is called";
+        count--;
+        cout<<endl<<count;
+    }
+};
+int main()
+{
+    system ("cls");
+    jalebi n1;
+    {
+        cout<<endl<<"We entered the block";
+        jalebi n2,n3;
+        cout<<endl<<"Now time to exit the block";
+    }//after exiting-= the objects are destroyed
+    return 0;
+}

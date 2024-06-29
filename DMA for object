@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class complex
+{
+    float real , img;
+    public : 
+    complex()
+    {
+        real = 0;
+        img = 0;
+    }
+    complex(float r, float i)
+    {
+        real = r;
+        img = i;
+    }
+    void display()
+    {
+        cout<<"The complex number is"<<endl<<real<<"+j"<<img;
+    }
+};
+int main()
+{
+    complex c1;
+    complex *n;
+    n= new complex(23,8.7);
+    n->display();
+    return 0;
+}

@@ -1,0 +1,59 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+class cartesian
+{
+    float x;
+    float y;
+    public :
+    cartesian()
+    {
+        x=0;
+        y=0;
+    }
+    cartesian(float a, float b)
+    {
+        x=a;
+        y=b;
+    }
+   void show()
+   {
+    cout<<endl<<"The value in cartesian form are :"<<endl<<x<<endl<<y;
+   }
+};
+class polar
+{
+    int angle;
+    float radius;
+    public :
+    polar ()
+    {
+        radius =0;
+        angle =0;
+    }
+    polar (float rad, int ang)
+    {
+        angle = ang;
+        radius = rad;
+    }
+    operator cartesian()
+    {
+        float x=radius*cos(angle);
+        float y=radius*sin(angle);
+        return cartesian(x,y);
+    }
+    void display()
+    {
+        cout<<"the value in polar form are : "<<endl<<angle<<endl<<radius;
+    }
+};
+int main()
+{
+    system ("cls");
+    polar p(45,3);
+    cartesian c;
+    c=p;
+    p.display();
+    c.show();
+    return 0;
+}

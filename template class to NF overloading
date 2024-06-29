@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+template<class T>
+T absolute(T n)
+{
+    if (n<0)
+    {
+    return -n;
+    }
+    else 
+    {
+    return n;
+    }
+}
+int main()
+{
+    int a=12;
+    float b=6.7;
+    cout<<"the absolute value of a is"<<absolute(a);
+    cout<<endl<<"the absolute value of b is"<<absolute(b);
+    return 0;
+}
